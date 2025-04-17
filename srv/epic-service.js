@@ -4,8 +4,19 @@ class ProjectService extends cds.ApplicationService { init() {
 
   // Register your event handlers in here, for example:
   this.on('READ', Users, book => { 
-    return "Hello from the event handler!"
+    return { 
+      ID: '11111111-1111-1111-1111-111111111111',
+      name: "Hello from the event handler!"
+    };
+    
   }) 
+
+  this.on('helloUser', async (req) => {
+    return { 
+      ID: '11111111-1111-1111-1111-111111111111',
+      name: "Hello from the event handler!"
+    };
+  })
 
   return super.init()
 }}

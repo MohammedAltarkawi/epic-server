@@ -1,0 +1,13 @@
+<mvc:View controllerName="org.energy4u.epicui.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <List items="{/Teams}" headerText="{/helloUser/name}">
+    <StandardListItem
+      title="{name}"
+      description="Manager ID: {manager_ID}"
+    />
+  </List>
+    
+    </Page>
+</mvc:View>

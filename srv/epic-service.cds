@@ -5,7 +5,11 @@ service ProjectService {
 
   
   entity Teams as projection on my.Teams;
-
-
+type HelloUser {
+  ID: UUID;
+  name: String;
+}
+  function helloUser() returns HelloUser;
+  
   entity Users as projection on my.Users;
 }
