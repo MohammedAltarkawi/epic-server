@@ -2,7 +2,7 @@
 namespace org.energy4u.epic;
 
 entity Users  {
-  key ID       : Integer;
+  key ID       : String;
  // persNr       : String(10);
   name         : String(100);
   //email        : String(100);

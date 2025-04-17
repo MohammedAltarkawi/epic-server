@@ -3,7 +3,7 @@ class ProjectService extends cds.ApplicationService { init() {
   const { Users } = cds.entities('ProjectService')
 
   // Register your event handlers in here, for example:
-  this.on('READ', Users, book => { 
+  this.on('READ', Users, async (req) => { 
     return { 
       ID: '11111111-1111-1111-1111-111111111111',
       name: "Hello from the event handler!"
@@ -12,10 +12,8 @@ class ProjectService extends cds.ApplicationService { init() {
   }) 
 
   this.on('helloUser', async (req) => {
-    return { 
-      ID: '11111111-1111-1111-1111-111111111111',
-      name: "Hello from the event handler!"
-    };
+    const username = req.user.id;
+      return await SELECT.from(Users).where({ ID: username });    
   })
 
   return super.init()

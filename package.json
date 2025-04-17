@@ -25,7 +25,16 @@
         "credentials": {
           "url": "db.sqlite"
         }
+      },
+      "auth": {
+      "kind": "basic",
+      "users": {
+        "A940434": {
+          "password": "123",
+          "roles": [ "admin" ]
+        }
       }
+    }
     }
   },
   "workspaces": [
